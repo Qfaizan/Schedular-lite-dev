@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "wsl-multitenancy-dev-ac13b",
+    "dev": "wsl-multitenancy-dev-ac13b"
+  },
+  "targets": {}
+}

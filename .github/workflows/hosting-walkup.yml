@@ -1,0 +1,50 @@
+name: Firebase Deploy Scheduler Lite Hosting
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  build-hosting:
+    name: Build Hosting
+    runs-on: ubuntu-latest
+    steps:
+   #   - uses: actions/checkout@v2
+   #     with:
+   #       fetch-depth: 0
+   #   - uses: sonarsource/sonarqube-scan-action@master
+   #     env:
+   #        SONAR_TOKEN: c4c23f5afb4724bdd905e6eeee59660175449a17
+   #        SONAR_HOST_URL: https://0b94-2409-4071-d8a-ff43-ad14-35f8-d911-c36a.ngrok.io
+      - name: Checkout Repo
+        uses: actions/checkout@v2.3.2
+      - name: Install Dependencies
+        run: npm install --force
+      - run: npm install -g eslint@7.0.0
+      - run: eslint . --ext .js,.jsx,.ts,.tsx
+      - name: Build
+        run: npm run build:development
+        env:
+          CI: false
+      - name: Archive Production Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build
+  deploy-hosting:
+    name: Deploy Hosting
+    needs: build-hosting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2.3.2
+      - name: Download Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: build
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting --project worksitelabs-report
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
