@@ -1,0 +1,48 @@
+name: Firebase Deploy Scheduler Lite Hosting
+on:
+  push:
+    branches:
+      - uat
+jobs:
+  build-hosting:
+    name: Build Hosting
+    runs-on: ubuntu-latest
+    steps:
+   #  - uses: actions/checkout@v2
+   #     with:
+   #       fetch-depth: 0
+   #   - uses: sonarsource/sonarqube-scan-action@master
+   #     env:
+   #         SONAR_TOKEN: c4c23f5afb4724bdd905e6eeee59660175449a17
+   #         SONAR_HOST_URL: https://f408-2405-204-528d-592b-65d2-2629-b7b-3adc.ngrok.io
+      - name: Checkout Repo
+        uses: actions/checkout@v2.3.2
+      - name: Install Dependencies
+        run: npm install --force
+      - name: Build
+        run: npm run build:development
+        env:
+          CI: false
+      - name: Archive Production Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build
+  deploy-hosting:
+    name: Deploy Hosting
+    needs: build-hosting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2.3.2
+      - name: Download Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: build
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting --project api--dev
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

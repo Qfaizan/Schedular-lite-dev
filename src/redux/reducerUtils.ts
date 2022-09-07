@@ -1,0 +1,78 @@
+import { format } from "date-fns";
+
+export const formValue = {
+    emails:[],
+    IsAirline:false,
+    acknowledgementId: null,
+    adminLogin:false,
+    airline: null,
+    minors:[],
+    airlineCode: null,
+    email: '',
+    phone: '',
+    firstName: '',
+    policyHolderbirthDate:"",
+    isNotHavePermanentAddress:false,
+    birthDate:"",
+    lastName: '',
+    middleName: '',
+    cPartnerID: '',
+    confirmationCode: null,
+    location: null,
+    countOfRecursiveAppt:null,
+    paymentIntentId:'',
+    isWalkUpTest:true,
+    payingMethod: '',
+    testSelection: "general",
+    travelType: "DOM",
+    country:'',
+    zipCode: '',
+    address: '',
+    county: '',
+    city: '',
+    state: '',
+    agreeContent:false,
+    discountAmount:0,
+    agreeTestedConsent:false,
+    agreeAssignment:false,
+    coupon_Id:'',
+    govtIdFrontCard: '',
+    govtIdBackCard: '',
+    subscriberFirstName: '',
+    subscriberLastName: '',
+    insuranceFrontCard: '',
+    insuranceBackCard: '',
+    insuranceFor:"i'm", 
+    testType: '',
+    isExpress: false,
+    isAntigen: false,
+    isRapid: false,
+    standardTest: true,
+    price: 90,
+    testDuration: '',
+    availableForRecurstion:{
+        isActive:false,
+        weekly:true,
+        day:0
+    },
+    locationTestType: false,
+    isPhnVerified: false,
+    isEmailVerified: false,
+    subLocation:'',
+    isDisabled: true,
+    registeringFor:'myself',
+    date:format(new Date(),'LL/dd/yyyy'),
+    slot:{
+        date: format(new Date(),'LL/dd/yyyy'),
+        period: 0,
+        locationId: 16,
+        label:format(new Date(),'hh:mm a')
+    }
+}
+export const AppSettings ={
+    modal:{
+        open:false,
+        type:'',
+        title:''
+    }
+}

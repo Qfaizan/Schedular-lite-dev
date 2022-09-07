@@ -1,0 +1,224 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Quicksand', sans-serif !important;
+    font-weight: 500 !important;
+}
+.h-55{
+    height: 55px !important;
+}
+input{
+    font-weight: 500 !important;
+}
+input:disabled{
+    font-weight: 800 !important;
+}
+
+.f-3{
+    font-weight: 300 !important;
+}
+.f-5{
+    font-weight: 500 !important;
+}
+.f-6{
+    font-weight: 600 !important;
+}
+.f-7{
+    font-weight: 700 !important;
+}
+.f-8{
+    font-weight: 800 !important;
+}
+.f-9{
+    font-weight: 900 !important;
+}
+
+.bg-orange{
+    background-color: rgb(255 128 46) !important;
+}
+.text-orange{
+    color: rgb(255 128 46) !important;
+}
+.border-orange{
+    border-color:rgb(255 128 46) !important;
+}
+
+
+.bg-green{
+    background-color: rgb(97 156 138) !important;
+}
+.text-green{
+    color: rgb(97 156 138) !important;
+}
+.border-green{
+    border-color:rgb(97 156 138) !important;
+}
+
+
+.bg-dark{
+    background-color: rgb(36 61 77) !important;
+}
+.border-dark{
+    border-color:rgb(36 61 77) !important;
+}
+.text-dark{
+    color: rgb(36 61 77) !important;
+}
+.bg-dark{
+    background-color: rgb(36 61 77) !important;
+}
+.border-dark{
+    border-color:rgb(36 61 77) !important;
+}
+.text-dark{
+    color: rgb(36 61 77) !important;
+}
+.bg-gray{
+    background-color: rgba(16, 16, 16, 0.12) !important;
+}
+
+.bg-yellow{
+    background-color: rgb(250 194 26) !important;
+}
+.text-yellow{
+    color: rgb(250 194 26) !important;
+}
+.border-yellow{
+    border-color: rgb(250 194 26) !important;
+}
+.MuiInputLabel-root, .MuiInputLabel-formControl, .MuiInputLabel-animated{
+    font-weight: 600 !important;
+    color: rgba(0, 0, 0, 0.702) !important;
+}
+.textType{
+    color:rgb(16,16,16) !important;
+    border: 1px solid;
+    border-color: rgb(255,128,46) !important;
+    background-color:rgb(255,255,255);
+}
+.textType:hover{
+    color:black;
+    background-color: rgb(250 194 26);
+}
+
+.typeOptions{
+    border-radius: 6px !important;
+    white-space:normal !important;
+    max-width: 160px !important;
+}
+
+.btn{
+    padding:8px 15px;
+    border-radius: 999px;
+    cursor: pointer !important;
+    border: none;
+    display: block;
+    white-space:nowrap;
+}
+
+.fill-btn-d {
+    background-color: rgb(222,222,222) !important;
+    color:rgb(148,148,150) !important;
+    border: none !important;
+    cursor: not-allowed !important;
+}
+.fill-btn{
+    color:white;
+    background-color: rgb(238,119,43) !important;
+}
+.fill-btn:hover { background-image: linear-gradient(to right, rgb(196, 98, 35),rgb(226, 113, 41)) !important; }
+.fill-btn:focus { background-image: linear-gradient(to right, rgb(226, 113, 41), rgb(241, 121, 43)) !important;}
+.fill-btn:active { background-color: rgb(255,143,71) !important;}
+
+.outline-btn-d{
+    background-color: rgb(251,251,251) !important;
+    color: rgb(162,162,162) !important;
+    border-color: rgb(162,162,162) !important;
+    cursor: not-allowed !important;
+}
+.outline-btn{
+    color:rgb(16,16,16) ;
+    border: 1px solid;
+    border-color: rgb(255,128,46) !important;
+    background-color:rgb(255,255,255);
+}
+.outline-btn:hover { background-color:rgb(255,255,255) ; }
+.outline-btn:active { background-color:rgb(255,255,255) ; }
+.outline-btn:focus { background-image: linear-gradient(to right,rgb(254, 246, 223), rgb(254, 251, 243)) ; }
+
+
+.text-btn-d {
+    background-color: rgb(251,251,251) !important;
+    color:rgb(166,166,168) !important;
+    cursor: not-allowed !important;
+}
+.text-btn{
+    color:rgb(16,16,16) !important;
+    background-color: rgb(251,251,251) !important;
+}
+.text-btn:hover { background-color: rgb(250,221,132) !important; }
+.text-btn:focus { background-color: rgb(251,218,162) !important;}
+.text-btn:active { background-color: rgb(250,232,177) !important;}
+
+
+.elevated-btn-d {
+    background-color: rgb(224,224,224) !important;
+    color:rgb(149,149,151) !important;
+    cursor: not-allowed !important;
+}
+.elevated-btn{
+    color:rgb(16,16,16) !important;
+    background-color: rgb(251,251,251) !important;
+    box-shadow: 0px 1px 2px rgba(153, 153, 153, 0.15), 0px 1px 3px 1px rgba(0, 0, 0, 0.3) !important;
+}
+.elevated-btn:hover { background-color: rgb(252,218,118) !important; box-shadow: 0px 1px 2px rgba(153, 153, 153, 0.15), 0px 1px 3px 1px rgba(0, 0, 0, 0.3) !important; }
+.elevated-btn:focus { background-color: rgb(250,194,26) !important; box-shadow: none !important;}
+.elevated-btn:active { background-color: rgb(249,194,26) !important; box-shadow: none !important;}
+
+
+.tonal-btn-d {
+    background-color: rgb(224,224,224) !important;
+    color:rgb(149,149,151) !important;
+}
+.tonal-btn{
+    color:rgb(16,16,16) !important;
+    background-image:linear-gradient(to right, rgb(250, 194, 26), rgb(250, 194, 26)) !important;
+}
+.tonal-h:hover { background-image:linear-gradient(to right, rgb(250, 198, 40), rgb(254, 220, 118)) !important; }
+.tonal-f:focus { background-image:linear-gradient(to right, rgb(250, 200, 52), rgb(250, 200, 52)) !important; }
+.tonal-p:active { background-image:linear-gradient(to right, rgb(250, 225, 150), rgb(250, 225, 150)) !important; }
+
+.divider{
+    border-bottom: 1px solid rgb(94, 151, 134) !important;
+}
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline,
+.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline,
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-focused .MuiOutlinedInput-notchedOutline
+{
+    border-color: rgb(97 156 138) !important;
+    border-width: 2px !important;
+}
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline,
+.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline, 
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root.Mui-error .MuiOutlinedInput-notchedOutline
+{
+    border-color: rgb(255 128 46) !important;
+    border-width: 2px !important;
+}
+.css-vqmohf-MuiButtonBase-root-MuiRadio-root.Mui-checked,
+.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root.Mui-focused{
+    color:rgb(97 156 138) !important;
+}
+.css-1sumxir-MuiFormLabel-root-MuiInputLabel-root.Mui-error {
+    color: rgb(255 128 46) !important;
+}
+
+.react-date-picker__wrapper{
+    border:none;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
